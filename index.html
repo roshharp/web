@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Melbourne Building Advocates | Independent Building Advocacy Services</title>
+    <meta name="description" content="Melbourne Building Advocates offers independent building advocacy services. Expert guidance from design to completion. Save thousands on your custom home build with unbiased advice. Plan Right. Build Wise.">
+    <meta name="keywords" content="building advocate Melbourne, independent building advice, custom home building, building consultant Melbourne, home building advocate, builder selection, contract review, Plan Right Build Wise">
+    <meta name="author" content="Melbourne Building Advocates">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Melbourne Building Advocates | Independent Building Advocacy Services">
+    <meta property="og:description" content="Independent building advocacy from design to completion. Save thousands and build with confidence across Melbourne.">
+    
+    <!-- Geo Tags -->
+    <meta name="geo.region" content="AU-VIC">
+    <meta name="geo.placename" content="Melbourne">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1e3a2e;
+            --primary-dark: #152921;
+            --primary-light: #2d5a45;
+            --accent: #d4af37;
+            --accent-light: #e5c158;
+            --saffron: #ff9933;
+            --cream: #faf8f3;
+            --cream-dark: #f5f0e8;
+            --dark: #0f1f19;
+            --text: #2c3e35;
+            --text-light: #5a6b62;
+            --white: #ffffff;
+            --border: rgba(30, 58, 46, 0.1);
+            --success: #10b981;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--text);
+            background: var(--cream);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(250, 248, 243, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--border);
+            padding: 1.2rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: 
+                linear-gradient(135deg, rgba(30, 58, 46, 0.92) 0%, rgba(45, 90, 69, 0.88) 100%),
+                url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=80') center/cover no-repeat;
+            color: var(--white);
+            padding: 12rem 2rem 8rem;
+            position: relative;
+            overflow: hidden;
+            margin-top: 0;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 150px;
+            background: linear-gradient(to top, var(--cream), transparent);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            opacity: 0.95;
+            max-width: 600px;
+            margin: 0 auto 2.5rem;
+            font-weight: 300;
+            line-height: 1.7;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--dark);
+            padding: 1.1rem 2.5rem;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+            margin-bottom: 2rem;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+            background: var(--accent-light);
+        }
+
+        /* Flashing Motto */
+        .motto-container {
+            margin-top: 1rem;
+            padding: 1.5rem 2rem;
+            background: rgba(212, 175, 55, 0.15);
+            border: 2px solid var(--accent);
+            border-radius: 16px;
+            display: inline-block;
+            animation: flash 2s infinite;
+            backdrop-filter: blur(10px);
+        }
+
+        .motto-text {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            font-weight: 700;
+            color: var(--accent);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            text-shadow: 0 2px 10px rgba(212, 175, 55, 0.3);
+        }
+
+        @keyframes flash {
+            0%, 100% { 
+                box-shadow: 0 0 20px rgba(212, 175, 55, 0.3), inset 0 0 20px rgba(212, 175, 55, 0.1);
+                transform: scale(1);
+            }
+            50% { 
+                box-shadow: 0 0 40px rgba(212, 175, 55, 0.6), inset 0 0 30px rgba(212, 175, 55, 0.2);
+                transform: scale(1.02);
+            }
+        }
+
+        /* Services Section */
+        .services-section {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: -4rem auto 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        .section-intro {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 4rem;
+        }
+
+        .section-label {
+            display: inline-block;
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .section-desc {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent), var(--saffron));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(30, 58, 46, 0.1);
+            border-color: rgba(212, 175, 55, 0.3);
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 10px 25px rgba(30, 58, 46, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .service-icon svg {
+            width: 32px;
+            height: 32px;
+            fill: none;
+            stroke: var(--accent);
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .service-card:hover .service-icon {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 15px 35px rgba(30, 58, 46, 0.25);
+        }
+
+        .service-title {
+            font-size: 1.4rem;
+            color: var(--primary);
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+
+        .service-desc {
+            color: var(--text-light);
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        /* Process Section */
+        .process-section {
+            background: 
+                linear-gradient(135deg, rgba(250, 248, 243, 0.97) 0%, rgba(250, 248, 243, 0.97) 100%),
+                url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80') center/cover fixed;
+            padding: 6rem 2rem;
+            position: relative;
+        }
+
+        .process-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .process-path {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 2rem;
+            margin-top: 4rem;
+            position: relative;
+        }
+
+        .process-path::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 10%;
+            right: 10%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--saffron));
+            z-index: 0;
+            opacity: 0.4;
+            box-shadow: 0 2px 10px rgba(212, 175, 55, 0.3);
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .step-circle {
+            width: 80px;
+            height: 80px;
+            background: var(--white);
+            border: 3px solid var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--accent);
+            position: relative;
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.25);
+            transition: all 0.3s ease;
+        }
+
+        .process-step:hover .step-circle {
+            background: var(--accent);
+            color: var(--white);
+            transform: scale(1.1);
+            box-shadow: 0 12px 30px rgba(212, 175, 55, 0.4);
+        }
+
+        .step-title {
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .step-desc {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Feature Section */
+        .feature-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            padding: 0;
+            margin: 0;
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 50%;
+            background: linear-gradient(to left, rgba(0,0,0,0.3), transparent),
+                        url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=80') center/cover;
+            opacity: 0.6;
+        }
+
+        .feature-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            align-items: center;
+            min-height: 600px;
+        }
+
+        .feature-content {
+            padding: 6rem 3rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .feature-content h2 {
+            font-size: 2.75rem;
+            margin-bottom: 1.5rem;
+            color: var(--white);
+            line-height: 1.2;
+        }
+
+        .feature-content > p {
+            opacity: 0.95;
+            line-height: 1.8;
+            margin-bottom: 2.5rem;
+            font-size: 1.1rem;
+            max-width: 500px;
+        }
+
+        .feature-list {
+            list-style: none;
+        }
+
+        .feature-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            color: rgba(255, 255, 255, 0.95);
+            font-size: 1.05rem;
+        }
+
+        .feature-list .check {
+            width: 28px;
+            height: 28px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--dark);
+            font-size: 0.9rem;
+            flex-shrink: 0;
+            margin-top: 2px;
+            font-weight: 700;
+            box-shadow: 0 4px 10px rgba(212, 175, 55, 0.3);
+        }
+
+        .feature-visual {
+            position: relative;
+            z-index: 2;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem;
+        }
+
+        .visual-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 24px;
+            padding: 3rem;
+            text-align: center;
+            max-width: 350px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+        }
+
+        .visual-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+        }
+
+        .visual-icon svg {
+            width: 40px;
+            height: 40px;
+            stroke: var(--dark);
+            stroke-width: 2;
+            fill: none;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(180deg, var(--cream) 0%, var(--white) 100%);
+            padding: 6rem 2rem;
+            position: relative;
+        }
+
+        .contact-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 300px;
+            background: linear-gradient(to bottom, rgba(30, 58, 46, 0.03), transparent);
+            pointer-events: none;
+        }
+
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--white);
+            border-radius: 24px;
+            padding: 4rem;
+            box-shadow: 0 25px 50px -12px rgba(30, 58, 46, 0.1);
+            border: 1px solid var(--border);
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .contact-form {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            padding: 1rem;
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s;
+            background: var(--cream);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.1);
+            background: var(--white);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 140px;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+            border: none;
+            padding: 1.25rem 3rem;
+            border-radius: 100px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 1rem;
+            box-shadow: 0 4px 15px rgba(30, 58, 46, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(30, 58, 46, 0.3);
+        }
+
+        /* Success Message */
+        .success-message {
+            display: none;
+            background: var(--success);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 1.5rem;
+            font-weight: 500;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .success-message.show {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: rgba(255, 255, 255, 0.7);
+            padding: 4rem 2rem 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--saffron), var(--accent));
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-motto {
+            font-size: 1rem;
+            color: var(--accent);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .footer-text {
+            max-width: 500px;
+            margin: 0 auto 1.5rem;
+            line-height: 1.7;
+            opacity: 0.8;
+        }
+
+        .footer-abn {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.5);
+            margin-bottom: 1.5rem;
+            font-family: 'Plus Jakarta Sans', monospace;
+            letter-spacing: 0.05em;
+        }
+
+        .footer-bottom {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .process-path {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+            
+            .process-path::before {
+                display: none;
+            }
+            
+            .process-step {
+                text-align: left;
+                display: flex;
+                gap: 1.5rem;
+                align-items: flex-start;
+                background: var(--white);
+                padding: 1.5rem;
+                border-radius: 16px;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            }
+            
+            .step-circle {
+                margin: 0;
+                flex-shrink: 0;
+                width: 60px;
+                height: 60px;
+                font-size: 1.25rem;
+            }
+
+            .feature-section::before {
+                width: 100%;
+                opacity: 0.2;
+            }
+            
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .feature-content {
+                padding: 4rem 2rem;
+            }
+
+            .feature-visual {
+                display: none;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero {
+                padding: 8rem 1.5rem 5rem;
+            }
+
+            .motto-container {
+                padding: 1rem 1.5rem;
+            }
+
+            .motto-text {
+                font-size: 1.25rem;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-container {
+                padding: 2.5rem 1.5rem;
+            }
+        }
+    </style>
+<base target="_blank">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">◆ Melbourne Building Advocates</a>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#process">Process</a></li>
+                <li><a href="#why-us">Why Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Expert Building Advocacy Services</h1>
+            <p class="hero-subtitle">Independent guidance through every stage of your home building journey. From initial concept to final completion, we're your dedicated advocates.</p>
+            <a href="#contact" class="btn-primary">Get Free Consultation</a>
+            
+            <!-- Flashing Motto -->
+            <div class="motto-container">
+                <div class="motto-text">Plan Right. Build Wise.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <div class="section-intro">
+            <span class="section-label">Our Services</span>
+            <h2 class="section-title">Comprehensive Building Support</h2>
+            <p class="section-desc">We provide end-to-end advocacy services designed to protect your interests, save you money, and ensure your home is built to the highest standards.</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l8-4 8 4v14M8 21v-9a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v9"/></svg>
+                </div>
+                <h3 class="service-title">Design Consultation</h3>
+                <p class="service-desc">Work with experienced architects to create cost-effective custom designs that match your vision, lifestyle, and budget constraints.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <h3 class="service-title">Builder Selection</h3>
+                <p class="service-desc">Access our vetted network of Melbourne builders. We compare quotes, capabilities, and reputations to find your perfect match.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                </div>
+                <h3 class="service-title">Contract Review</h3>
+                <p class="service-desc">Expert analysis of HIA and MBA contracts. We identify risks, unfair clauses, and negotiate better terms on your behalf.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                </div>
+                <h3 class="service-title">Cost Estimation</h3>
+                <p class="service-desc">Professional quantity surveying and tender preparation. Ensure accurate pricing and avoid budget blowouts before construction begins.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                </div>
+                <h3 class="service-title">Build Advocacy</h3>
+                <p class="service-desc">Ongoing support during construction. We attend site meetings, review progress claims, and ensure quality and compliance standards.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <h3 class="service-title">Practical Completion</h3>
+                <p class="service-desc">Detailed defect inspections and handover advocacy. We ensure your home is finished to specification before final payment.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section" id="process">
+        <div class="process-container">
+            <div class="section-intro">
+                <span class="section-label">The Journey</span>
+                <h2 class="section-title">A Clear Path From Concept to Completion</h2>
+                <p class="section-desc">Our proven five-step process ensures nothing is missed and you're supported at every milestone.</p>
+            </div>
+
+            <div class="process-path">
+                <div class="process-step">
+                    <div class="step-circle">1</div>
+                    <div>
+                        <h3 class="step-title">Concept</h3>
+                        <p class="step-desc">Initial consultation to understand your vision, budget, and timeline requirements.</p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-circle">2</div>
+                    <div>
+                        <h3 class="step-title">Design</h3>
+                        <p class="step-desc">Develop architectural plans and obtain necessary permits and approvals.</p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-circle">3</div>
+                    <div>
+                        <h3 class="step-title">Tender</h3>
+                        <p class="step-desc">Select builders, compare quotes, and negotiate the best contract terms.</p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-circle">4</div>
+                    <div>
+                        <h3 class="step-title">Build</h3>
+                        <p class="step-desc">Ongoing advocacy during construction with regular inspections and progress reviews.</p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-circle">5</div>
+                    <div>
+                        <h3 class="step-title">Completion</h3>
+                        <p class="step-desc">Final defect inspection and handover advocacy to ensure quality delivery.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Section -->
+    <section class="feature-section" id="why-us">
+        <div class="feature-grid">
+            <div class="feature-content">
+                <span style="color: var(--accent); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem; display: block;">The Difference</span>
+                <h2>More Than Just Inspections</h2>
+                <p>The big difference with Melbourne Building Advocates from most other building consultants is the ongoing support we provide to explain reports and handle builder disputes. We're here to answer any questions as your unbiased third-party support.</p>
+                
+                <ul class="feature-list">
+                    <li>
+                        <span class="check">✓</span>
+                        <span>Unlimited phone and email support throughout your build</span>
+                    </li>
+                    <li>
+                        <span class="check">✓</span>
+                        <span>Builder negotiation and dispute resolution assistance</span>
+                    </li>
+                    <li>
+                        <span class="check">✓</span>
+                        <span>Progress claim verification before you pay invoices</span>
+                    </li>
+                    <li>
+                        <span class="check">✓</span>
+                        <span>Access to our network of specialist consultants</span>
+                    </li>
+                    <li>
+                        <span class="check">✓</span>
+                        <span>Educational resources to empower you as a home builder</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="feature-visual">
+                <div class="visual-card">
+                    <div class="visual-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                    </div>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--white);">Your Advocate</h3>
+                    <p style="color: rgba(255,255,255,0.8); font-size: 1rem;">Working exclusively for you, not the builders.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="contact-container">
+            <div class="contact-header">
+                <span class="section-label">Get In Touch</span>
+                <h2 class="section-title">Start Your Building Journey</h2>
+                <p class="section-desc">Book your free 30-minute consultation. We'll discuss your project and show you how we can help save you thousands.</p>
+            </div>
+
+            <!-- Formspree Form configured for rosh.harp@gmail.com -->
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form" id="contactForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="John Smith">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="john@example.com">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="(03) 9000 0000">
+                    </div>
+                    <div class="form-group">
+                        <label for="stage">Building Stage</label>
+                        <select id="stage" name="building_stage">
+                            <option value="">Select your current stage...</option>
+                            <option value="planning">Just Starting / Planning</option>
+                            <option value="design">Design Phase</option>
+                            <option value="builder_search">Looking for Builder</option>
+                            <option value="contract">Contract Review Needed</option>
+                            <option value="construction">Currently Building</option>
+                            <option value="completion">Practical Completion</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Tell Us About Your Project *</label>
+                    <textarea id="message" name="message" required placeholder="Please describe your building project, timeline, and any specific concerns you have..."></textarea>
+                </div>
+
+                <!-- Formspree configuration -->
+                <input type="hidden" name="_subject" value="New Consultation Request - Melbourne Building Advocates">
+                <input type="hidden" name="_replyto" value="rosh.harp@gmail.com">
+                
+                <button type="submit" class="submit-btn">Send Message & Book Consultation</button>
+                
+                <!-- Success Message -->
+                <div class="success-message" id="successMessage">
+                    Thank you! We have received your inquiry. We'll get back to your request soon.
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">Melbourne Building Advocates</div>
+            <div class="footer-motto">Plan Right. Build Wise.</div>
+            <p class="footer-text">Independent building consultancy serving Melbourne and surrounding areas. We work exclusively for home buyers, not builders.</p>
+            <div class="footer-abn">ABN: 67 830 987 096</div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Melbourne Building Advocates. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form handling with success message and reset
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const btn = document.querySelector('.submit-btn');
+            const successMsg = document.getElementById('successMessage');
+            const originalText = btn.textContent;
+            
+            btn.textContent = 'Sending...';
+            btn.style.opacity = '0.8';
+            
+            // Submit to Formspree
+            const form = this;
+            const data = new FormData(form);
+            
+            fetch(form.action, {
+                method: 'POST',
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    // Show success message
+                    successMsg.classList.add('show');
+                    
+                    // Reset form
+                    form.reset();
+                    
+                    // Reset button
+                    btn.textContent = originalText;
+                    btn.style.opacity = '1';
+                    
+                    // Hide success message after 5 seconds
+                    setTimeout(() => {
+                        successMsg.classList.remove('show');
+                    }, 5000);
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            }).catch(error => {
+                btn.textContent = 'Error - Try Again';
+                btn.style.opacity = '1';
+                console.error('Form error:', error);
+            });
+        });
+    </script>
+</body>
+</html>

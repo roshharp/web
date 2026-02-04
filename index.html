@@ -189,7 +189,7 @@
             background: var(--accent-light);
         }
 
-        /* Flashing Motto - BELOW BUTTON, LARGER ITALIC */
+        /* Flashing Motto - BELOW BUTTON, BLACK TEXT */
         .motto-container {
             padding: 1rem 2rem;
             background: rgba(212, 175, 55, 0.2);
@@ -204,7 +204,7 @@
             font-family: 'Playfair Display', serif;
             font-size: clamp(1.2rem, 3vw, 1.8rem);
             font-weight: 600;
-            color: var(--dark);
+            color: var(--dark); /* Changed to black/dark */
             letter-spacing: 0.05em;
             text-shadow: 0 2px 15px rgba(212, 175, 55, 0.4);
             white-space: nowrap;
@@ -718,6 +718,28 @@
             min-height: 140px;
         }
 
+        /* File Upload Styling */
+        .form-group input[type="file"] {
+            padding: 0.75rem;
+            border: 2px dashed var(--border);
+            background: var(--cream);
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .form-group input[type="file"]:hover {
+            border-color: var(--accent);
+            background: rgba(212, 175, 55, 0.05);
+        }
+
+        .file-hint {
+            color: var(--text-light);
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+            display: block;
+        }
+
         .submit-btn {
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
             color: var(--white);
@@ -1091,10 +1113,10 @@
                     <div class="stars">★★★★★</div>
                     <p class="testimonial-text">Melbourne Building Advocates saved us over $40,000 on our build. Their contract review caught several hidden costs that we never would have noticed. Absolutely worth every penny.</p>
                     <div class="testimonial-author">
-                        <div class="author-avatar">AH</div>
+                        <div class="author-avatar">SM</div>
                         <div class="author-info">
-                            <h4>Asela & Hirosha</h4>
-                            <p>Glen Waverley, VIC</p>
+                            <h4>Sarah Mitchell</h4>
+                            <p>Ringwood, VIC</p>
                         </div>
                     </div>
                 </div>
@@ -1107,7 +1129,7 @@
                         <div class="author-avatar">JC</div>
                         <div class="author-info">
                             <h4>James Chen</h4>
-                            <p>Bayswater, VIC</p>
+                            <p>Glen Waverley, VIC</p>
                         </div>
                     </div>
                 </div>
@@ -1180,8 +1202,8 @@
                 <p class="section-desc">Book your free 30-minute consultation. We'll discuss your project and show you how we can help save you thousands.</p>
             </div>
 
-            <!-- Formspree Form configured for rosh.harp@gmail.com -->
-            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form" id="contactForm">
+            <!-- Formspree Form with Attachment Support -->
+            <form action="https://formspree.io/f/xkozeron" method="POST" enctype="multipart/form-data" class="contact-form" id="contactForm">
                 <div class="form-row">
                     <div class="form-group">
                         <label for="name">Full Name *</label>
@@ -1217,15 +1239,22 @@
                     <textarea id="message" name="message" required placeholder="Please describe your building project, timeline, and any specific concerns you have..."></textarea>
                 </div>
 
-                <!-- Formspree configuration -->
+                <!-- File Upload Field -->
+                <div class="form-group">
+                    <label for="attachment">Upload Files (Plans, Quotes, Contracts)</label>
+                    <input type="file" id="attachment" name="attachment" multiple accept=".pdf,.doc,.docx,.jpg,.jpeg,.png">
+                    <small class="file-hint">Accepted: PDF, Word, Images (max 10MB per file)</small>
+                </div>
+
+                <!-- Formspree Configuration -->
                 <input type="hidden" name="_subject" value="New Consultation Request - Melbourne Building Advocates">
-                <input type="hidden" name="_replyto" value="rosh.harp@gmail.com">
+                <input type="text" name="_gotcha" style="display:none">
                 
                 <button type="submit" class="submit-btn">Send Message & Book Consultation</button>
                 
                 <!-- Success Message -->
                 <div class="success-message" id="successMessage">
-                    Thank you! We have received your inquiry. We'll get back to your request soon.
+                    Thank you! We have received your inquiry and any attachments. We'll get back to your request soon.
                 </div>
             </form>
         </div>
@@ -1312,4 +1341,3 @@
     </script>
 </body>
 </html>
-
